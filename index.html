@@ -480,7 +480,7 @@
 								
 								
 								<li class="nav-search ml-3 ml-md-4">
-									<a href="">
+									<a href="DL7/dljm.html">
 										<img class="imgin1" style="width: 24px;height: 24px;" src="images/78a381109dd1919a0bde420b62525b2df37ac73f17b1-rx7BWq_fw658.webp" alt="#" title="登录|注册" name="用户名" />
 									</a>
 								</li>
@@ -527,7 +527,7 @@
                                             value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label
                                             for="type-baidu"><span class="text-muted">百度</span></label></li>
                                     <li><input hidden="" type="radio" name="type" id="type-google"
-                                            value="https://www.google.com/search?q=" data-placeholder="谷歌两下"><label
+                                            value="https://www.google.com/search?q=" data-placeholder="谷歌一下"><label
                                             for="type-google"><span class="text-muted">谷歌</span></label></li>
                                     <li><input hidden="" type="radio" name="type" id="type-zhannei"
                                             value="https://www.iplaysoft.com/?s="
@@ -547,7 +547,7 @@
                                             value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label
                                             for="type-baidu1"><span class="text-muted">百度</span></label></li>
                                     <li><input hidden="" type="radio" name="type" id="type-google1"
-                                            value="https://www.google.com/search?q=" data-placeholder="谷歌两下"><label
+                                            value="https://www.google.com/search?q=" data-placeholder="谷歌一下"><label
                                             for="type-google1"><span class="text-muted">谷歌</span></label></li>
                                     <li><input hidden="" type="radio" name="type" id="type-360"
                                             value="https://www.so.com/s?q=" data-placeholder="360好搜"><label
@@ -1766,7 +1766,7 @@
                                             value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label
                                             for="m_type-baidu"><span class="text-muted">百度</span></label></li>
                                     <li><input hidden="" type="radio" name="type2" id="m_type-google"
-                                            value="https://www.google.com/search?q=" data-placeholder="谷歌两下"><label
+                                            value="https://www.google.com/search?q=" data-placeholder="谷歌一下"><label
                                             for="m_type-google"><span class="text-muted">Google</span></label></li>
                                     <li><input hidden="" type="radio" name="type2" id="m_type-zhannei"
                                             value="https://www.iplaysoft.com/?s="
@@ -1786,7 +1786,7 @@
                                             value="https://www.baidu.com/s?wd=" data-placeholder="百度一下"><label
                                             for="m_type-baidu1"><span class="text-muted">百度</span></label></li>
                                     <li><input hidden="" type="radio" name="type2" id="m_type-google1"
-                                            value="https://www.google.com/search?q=" data-placeholder="谷歌两下"><label
+                                            value="https://www.google.com/search?q=" data-placeholder="谷歌一下"><label
                                             for="m_type-google1"><span class="text-muted">Google</span></label></li>
                                     <li><input hidden="" type="radio" name="type2" id="m_type-360"
                                             value="https://www.so.com/s?q=" data-placeholder="360好搜"><label
@@ -2062,6 +2062,45 @@ function switchNightMode(){
 	  ↑↑↑于志↑↑↑
 -->
 	<!--可以点个star吗—ฅ/ᐠ. ̫ .ᐟ\ฅ —-->
+		<script>
+		//禁用操作
+	
+	window.onload = function(){
+		document.onkeydown = function (){
+			var e = window.event || arguments[0];
+			//F12
+			if(e.keyCode == 123){
+				return false;
+			//Ctrl+Shift+I
+			}else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+				return false;
+			//Ctrl+Shift+C
+			}else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 67)){
+				return false;
+			//Shift+F10
+			}else if((e.shiftKey) && (e.keyCode == 121)){
+				return false;
+			//Ctrl+U
+			}else if((e.ctrlKey) && (e.keyCode == 85)){
+				return false;
+			//Ctrl+S
+			}else if((e.ctrlKey) && (e.keyCode == 83)){
+			return false;
+		}
+	};
+		document.oncontextmenu = function (){
+			return false;
+		}
+	}
+	
+	//禁止复制
+	document.onselectstart=new Function('event.returnValue=false;');
+	
+	//禁止选择文字
+	document.body.onselectstart = function() {
+		self.event.returnValue=false
+	  };
+	</script>
 </body>
 
 </html>
